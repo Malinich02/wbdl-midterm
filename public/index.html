@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Management System - Create Task</title>
+    <!-- Connecting to product.css -->
+    <link rel="stylesheet" href="/css/product.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Task Management System</h1>
+
+      <!-- Form submission action -->
+      <form action="/save" method="POST">
+        <!-- Task Title Field -->
+        <div class="form-group">
+          <label for="task_title">Task Title</label>
+          <input
+            type="text"
+            id="task_title"
+            name="task_title"
+            placeholder="Enter task title"
+            required
+          />
+        </div>
+
+        <!-- Status Field -->
+        <div class="form-group">
+          <label for="status">Status</label>
+          <select id="status" name="status">
+            <option value="Pending" selected>Pending</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+          </select>
+        </div>
+
+        <!-- Description Field -->
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea
+            id="description"
+            name="description"
+            placeholder="Enter task description..."
+          ></textarea>
+        </div>
+
+        <div class="form-actions">
+          <a href="/tasks" class="btn-golist">GO LIST</a>
+          <button type="submit" class="btn-create">ADD TASK</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DELETE TASK</title>
+    <link rel="stylesheet" href="/css/delete.css" />
+  </head>
+  <body>
+    <div class="delete-page">
+      <div class="delete-modal-content">
+        <div class="delete-icon">✕</div>
+        <h2>Delete Task?</h2>
+        <% const task = (typeof listtask !== 'undefined' && listtask) ? listtask : ((typeof listproduct !== 'undefined' && listproduct) ? listproduct : {}); %>
+        <p>
+          Are you sure you want to delete
+          <strong><%= task.task_title || task.productname || 'this task' %></strong>?
+        </p>
+        <p class="warning-text">This action cannot be undone.</p>
+        <div class="delete-actions">
+          <a href="/tasks" class="btn-no">No, Cancel</a>
+          <form action="/delete/<%= task._id %>" method="post">
+            <button type="submit" class="btn-yes">Yes, Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

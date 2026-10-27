@@ -1,0 +1,221 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  padding: 40px;
+}
+
+/* Container */
+.table-container {
+  max-width: 1400px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.8s ease;
+}
+
+/* Title */
+.table-container h1 {
+  text-align: center;
+  color: #333;
+  font-size: 35px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+/* Button */
+.btn-add,
+.add-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: linear-gradient(to right, #4facfe, #00c6fb);
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.btn-add:hover,
+.add-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to right, #007bff, #0056b3);
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Header */
+thead {
+  background: linear-gradient(to right, #4f46e5, #7c3aed);
+  color: #fff;
+}
+
+thead th {
+  padding: 18px;
+  font-size: 16px;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+/* Body */
+tbody td {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  color: #444;
+  font-size: 15px;
+  vertical-align: middle;
+}
+
+/* Zebra Effect */
+tbody tr:nth-child(even) {
+  background: #f8f9ff;
+}
+
+/* Hover Effect */
+tbody tr {
+  transition: 0.3s;
+}
+
+tbody tr:hover {
+  background: #e8f1ff;
+}
+
+/* ID */
+tbody td:first-child {
+  font-size: 12px;
+  color: #777;
+  word-break: break-all;
+  max-width: 120px;
+}
+
+/* Task Title */
+.task-title-cell,
+tbody td:nth-child(2) {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+/* Task Description */
+.task-desc-cell {
+  max-width: 400px;
+  word-wrap: break-word;
+  color: #4b5563;
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.status-pending {
+  background: #fef3c7;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+.status-in-progress {
+  background: #dbeafe;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+
+.status-completed {
+  background: #d1fae5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Action Column */
+.action {
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* Edit Button */
+.btn-edit {
+  display: inline-block;
+  padding: 8px 20px;
+  margin-right: 5px;
+  background: #0d6efd;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-edit:hover {
+  background: #0b5ed7;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(13, 110, 253, 0.35);
+}
+
+/* Delete Button */
+.btn-delete {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #dc3545;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background: #bb2d3b;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(220, 53, 69, 0.35);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .table-container {
+    overflow-x: auto;
+  }
+  table {
+    min-width: 700px;
+  }
+}
